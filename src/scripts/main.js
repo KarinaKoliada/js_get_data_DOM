@@ -18,7 +18,8 @@ population.forEach((span) => {
 
 const totalPopulation = populationNumbers.reduce((acc, num) => acc + num, 0);
 
-const averagePopulation = totalPopulation / populationNumbers.length;
+const averagePopulation =
+populationNumbers.length > 0 ? totalPopulation / populationNumbers.length : 0;
 
 const formattedTotal = totalPopulation.toLocaleString();
 const formattedAverage = averagePopulation.toLocaleString();
